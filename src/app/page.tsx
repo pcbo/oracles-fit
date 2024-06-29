@@ -16,6 +16,7 @@ export default function Home() {
           />
           <p className="text-2xl">$GETFIT</p>
           <p>Onchain accountability for your weight loss journey.</p>
+          <w3m-button />
         </div>
       </div>
     </main>
