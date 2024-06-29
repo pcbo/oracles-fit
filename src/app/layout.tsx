@@ -5,6 +5,7 @@ import "./globals.css";
 import { config } from "@/config";
 import Web3ModalProvider from "@/context";
 import { cookieToInitialState } from "wagmi";
+import "dotenv/config";
 
 const rajdhani = Rajdhani({
   subsets: ["latin"],
