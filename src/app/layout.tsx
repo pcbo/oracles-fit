@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Oracles fit",
   description:
     "An incentive mechanism for people to lose weight using onchain accountability.",
+  icons: ["/favicon.ico"],
 };
 
 export default function RootLayout({

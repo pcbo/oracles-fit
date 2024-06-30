@@ -24,7 +24,7 @@ export default async function WalletPage({
       <div className="z-10 w-full max-w-5xl items-center justify-center font-mono text-sm lg:flex">
         <div className="fixed bottom-0 left-0 flex flex-col h-48 w-full items-center justify-center gap-2 bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
           <Image
-            src="/git-fit-logo.png"
+            src="/oracles-logo.png"
             alt="Get Fit Logo"
             className="rounded-full border border-white"
             width={100}
