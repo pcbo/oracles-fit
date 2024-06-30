@@ -28,3 +28,18 @@ export async function createUserOrFindUserByWallet(wallet: string) {
 
   return newUser;
 }
+
+export async function retrieveMeasuresForWallet(wallet: string) {
+  const user = await createUserOrFindUserByWallet(wallet);
+
+  if (!user) return null;
+
+  const { data: readings } = await supabase
+    .from("readings")
+    .select()
+    .eq("user_id", user.id)
+    .order("date_of_reading", { ascending: false })
+    .throwOnError();
+
+  return readings;
+}

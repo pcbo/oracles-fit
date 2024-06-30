@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
-import { createUserOrFindUserByWallet } from "@/app/functions/users";
-import { createReadingForUser } from "@/app/functions/measurements";
+import { createUserOrFindUserByWallet } from "@/functions/users";
+import { createReadingForUser } from "@/functions/measurements";
 
 const clientID = process.env.NEXT_PUBLIC_WITHINGS_CLIENT_ID ?? "";
 const secretID = process.env.WITHINGS_SECRET_ID ?? "";
