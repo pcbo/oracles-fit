@@ -6,6 +6,10 @@ const redirectURL = process.env.NEXT_PUBLIC_WITHINGS_REDIRECT_URL ?? "";
 export default function Home() {
   const withingsURL = `https://account.withings.com/oauth2_user/authorize2?response_type=code&client_id=${clientID}&scope=user.info,user.metrics,user.activity&redirect_uri=${redirectURL}&state=1231kp23k12m`;
 
+  console.log("Redirect url: ", redirectURL);
+  console.log("Client ID: ", clientID);
+  console.log("Withings URL: ", withingsURL);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-center font-mono text-sm lg:flex">
