@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 import { createUserOrFindUserByWallet } from "@/functions/users";
 import { createReadingForUser } from "@/functions/measurements";
 
@@ -94,6 +95,6 @@ export const GET = async (request: NextRequest) => {
     return Response.json({ message: "Reading not created" }, { status: 500 });
   }
 
-  return Response.redirect(`/${wallet}`);
+  return NextResponse.redirect(`/${wallet}`);
   // return Response.json({ user, reading }, { status: 200 });
 };
