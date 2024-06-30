@@ -90,5 +90,10 @@ export const GET = async (request: NextRequest) => {
 
   const reading = await createReadingForUser(user!, readingData);
 
-  return Response.json({ user, reading }, { status: 200 });
+  if (!reading) {
+    return Response.json({ message: "Reading not created" }, { status: 500 });
+  }
+
+  return Response.redirect(`/${wallet}`);
+  // return Response.json({ user, reading }, { status: 200 });
 };
