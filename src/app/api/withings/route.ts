@@ -31,7 +31,7 @@ export const GET = (request: NextRequest) => {
       const startOfDay = new Date(
         now.getFullYear(),
         now.getMonth(),
-        now.getDate() - 1,
+        now.getDate() - 7,
         0,
         0,
         0
