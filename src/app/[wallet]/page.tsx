@@ -22,7 +22,7 @@ export default async function WalletPage({
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 w-full max-w-5xl items-center justify-center font-mono text-sm lg:flex">
-        <div className="flex flex-col h-48 w-full items-center justify-center gap-2 bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
+        <div className="flex flex-col h-48 w-full items-center justify-center gap-2">
           <Image
             src="/oracles-logo.png"
             alt="Get Fit Logo"
