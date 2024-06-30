@@ -24,7 +24,7 @@ export default async function Image({
                 </span>
               )}
               <span tw="mt-8">
-                Start your accountability journey, today at oracles.fit!
+                Start your accountability journey at oracles.fit!
               </span>
             </h2>
           </div>
