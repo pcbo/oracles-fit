@@ -13,6 +13,17 @@ export const GET = async (request: NextRequest) => {
   const code = request.nextUrl.searchParams.get("code") ?? undefined;
   const wallet = request.nextUrl.searchParams.get("state") ?? undefined;
 
+  if (!wallet || !code) {
+    return Response.json(
+      { message: "Wallet or code not found" },
+      { status: 400 }
+    );
+  }
+
+  if (wallet.length !== 42 || !wallet.startsWith("0x")) {
+    return Response.json({ message: "Invalid wallet" }, { status: 400 });
+  }
+
   const url = "https://wbsapi.withings.net/v2/oauth2";
   const body = new URLSearchParams();
   body.append("action", "requesttoken");
