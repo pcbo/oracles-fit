@@ -95,6 +95,6 @@ export const GET = async (request: NextRequest) => {
     return Response.json({ message: "Reading not created" }, { status: 500 });
   }
 
-  return NextResponse.redirect(`/${wallet}`);
+  return NextResponse.redirect(`https://oracles.fit/${wallet}`);
   // return Response.json({ user, reading }, { status: 200 });
 };
